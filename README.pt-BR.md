@@ -25,7 +25,7 @@
 
 ## Sobre
 
-Este repositório reúne cinco desafios de programação que cobrem desde conceitos fundamentais de orientação a objetos e algoritmos clássicos até o desenvolvimento de uma aplicação web full-stack com API RESTful. Os exercícios são independentes entre si e devem ser implementados em **Java** ou **Node.js**.
+Este repositório reúne cinco desafios de programação que cobrem desde conceitos fundamentais de orientação a objetos e algoritmos clássicos até o desenvolvimento de uma aplicação web full-stack com API RESTful. Os exercícios são independentes entre si e implementados em **Go (Golang)**.
 
 **Estrutura sugerida de diretórios:**
 
@@ -222,7 +222,7 @@ Para `X = 10`, os múltiplos de 3 ou 5 abaixo de 10 são: `3, 5, 6, 9`
 
 Desenvolva uma aplicação **full-stack** composta por:
 
-- **Back-end:** API JSON RESTful (Java ou Node.js) com todos os verbos HTTP
+- **Back-end:** API JSON RESTful escrita em **Go (Golang)** com todos os verbos HTTP
 - **Front-end:** Single Page Application (SPA) consumindo a API
 
 **Modelo de dados:**

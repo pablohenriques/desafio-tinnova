@@ -25,7 +25,7 @@
 
 ## About
 
-This repository contains five programming challenges covering object-oriented fundamentals, classic algorithms, and full-stack web application development. Each exercise is independent and must be implemented in **Java** or **Node.js**.
+This repository contains five programming challenges covering object-oriented fundamentals, classic algorithms, and full-stack web application development. Each exercise is independent and implemented in **Go (Golang)**.
 
 **Suggested directory structure:**
 
@@ -222,7 +222,7 @@ For `X = 10`, the multiples of 3 or 5 below 10 are: `3, 5, 6, 9`
 
 Build a **full-stack** application consisting of:
 
-- **Back-end:** RESTful JSON API (Java or Node.js) using all HTTP verbs
+- **Back-end:** RESTful JSON API written in **Go (Golang)** using all HTTP verbs
 - **Front-end:** Single Page Application (SPA) consuming the API
 
 **Data model:**
