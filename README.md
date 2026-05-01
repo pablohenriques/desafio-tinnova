@@ -1,160 +1,164 @@
-# Desafios de Programação
+<div align="right">
+  <a href="README.pt-BR.md">🇧🇷 Português</a> &nbsp;|&nbsp; <strong>🇺🇸 English</strong>
+</div>
 
-> Série de exercícios progressivos cobrindo fundamentos de programação, algoritmos e desenvolvimento full-stack.
+# Programming Challenges
+
+> A progressive set of exercises covering programming fundamentals, algorithms, and full-stack development.
 
 ---
 
-## Índice
+## Table of Contents
 
-- [Sobre](#sobre)
-- [Persona Avaliadora — Ada](#persona-avaliadora--ada)
-- [Exercícios](#exercícios)
-  - [01 · Votos em Relação ao Total de Eleitores](#01--votos-em-relação-ao-total-de-eleitores)
+- [About](#about)
+- [Evaluator Persona — Ada](#evaluator-persona--ada)
+- [Exercises](#exercises)
+  - [01 · Votes Relative to Total Voters](#01--votes-relative-to-total-voters)
   - [02 · Bubble Sort](#02--bubble-sort)
-  - [03 · Fatorial](#03--fatorial)
-  - [04 · Soma dos Múltiplos de 3 ou 5](#04--soma-dos-múltiplos-de-3-ou-5)
-  - [05 · Cadastro de Veículos](#05--cadastro-de-veículos)
-- [Tabela de Checkpoints](#tabela-de-checkpoints)
-- [Critérios Gerais de Avaliação](#critérios-gerais-de-avaliação)
+  - [03 · Factorial](#03--factorial)
+  - [04 · Sum of Multiples of 3 or 5](#04--sum-of-multiples-of-3-or-5)
+  - [05 · Vehicle Registration](#05--vehicle-registration)
+- [Checkpoint Table](#checkpoint-table)
+- [General Evaluation Criteria](#general-evaluation-criteria)
 
 ---
 
-## Sobre
+## About
 
-Este repositório reúne cinco desafios de programação que cobrem desde conceitos fundamentais de orientação a objetos e algoritmos clássicos até o desenvolvimento de uma aplicação web full-stack com API RESTful. Os exercícios são independentes entre si e devem ser implementados em **Java** ou **Node.js**.
+This repository contains five programming challenges covering object-oriented fundamentals, classic algorithms, and full-stack web application development. Each exercise is independent and must be implemented in **Java** or **Node.js**.
 
-**Estrutura sugerida de diretórios:**
+**Suggested directory structure:**
 
 ```
 desafio-tinnova/
-├── ex01-votos/
+├── ex01-votes/
 ├── ex02-bubble-sort/
-├── ex03-fatorial/
-├── ex04-multiplos/
-└── ex05-veiculos/
+├── ex03-factorial/
+├── ex04-multiples/
+└── ex05-vehicles/
 ```
 
 ---
 
-## Persona Avaliadora — Ada
+## Evaluator Persona — Ada
 
-**Ada** é uma engenheira de software sênior com 15 anos de experiência em back-end, arquitetura de sistemas e code review. Seu estilo é direto, técnico e construtivo — ela não apenas aponta erros, mas explica o *porquê* por trás de cada correção e garante que o conceito foi absorvido antes de seguir em frente.
+**Ada** is a senior software engineer with 15 years of experience in back-end development, system architecture, and code review. Her style is direct, technical, and constructive — she doesn't just point out mistakes, she explains the *why* behind each correction and ensures the concept is truly understood before moving on.
 
-Ada atua em três frentes:
+Ada operates in three roles:
 
-| Papel | O que Ada faz |
+| Role | What Ada does |
 |---|---|
-| **Ensino** | Apresenta o conceito com exemplos práticos e analogias antes de cobrar a implementação. Explica a teoria por trás de cada exercício. |
-| **Avaliação** | Revisa o código submetido contra os critérios da tabela de checkpoints. Sinaliza: `APROVADO`, `REVISAR` ou `REPROVADO` por item. |
-| **Monitoria** | Após a entrega, Ada faz perguntas direcionadas para confirmar que o conceito foi internalizado, não apenas copiado. Exemplo: *"explique por que o Bubble Sort tem complexidade O(n²)"*. |
+| **Teaching** | Introduces each concept with practical examples and analogies before expecting implementation. Explains the theory behind each exercise. |
+| **Evaluation** | Reviews submitted code against the checkpoint table. Marks each item as `APPROVED`, `NEEDS REVISION`, or `REJECTED`. |
+| **Mentoring** | After delivery, Ada asks targeted questions to confirm the concept was internalized, not just copied. Example: *"explain why Bubble Sort has O(n²) complexity"*. |
 
-> **Princípio da Ada:** *"Código que funciona sem entendimento é dívida técnica disfarçada."*
-
----
-
-## Exercícios
+> **Ada's principle:** *"Code that works without understanding is just disguised technical debt."*
 
 ---
 
-### 01 · Votos em Relação ao Total de Eleitores
+## Exercises
 
-#### Descrição
+---
 
-Dada a seguinte base de dados eleitoral:
+### 01 · Votes Relative to Total Voters
+
+#### Description
+
+Given the following electoral dataset:
 
 ```
-total de eleitores = 1000
-válidos            = 800
-votos brancos      = 150
-nulos              = 50
+total voters  = 1000
+valid votes   = 800
+blank votes   = 150
+null votes    = 50
 ```
 
-Implemente uma **classe** com três métodos que calculem:
+Implement a **class** with three methods that calculate:
 
-- O percentual de votos **válidos** em relação ao total de eleitores
-- O percentual de votos **brancos** em relação ao total de eleitores
-- O percentual de votos **nulos** em relação ao total de eleitores
+- The percentage of **valid** votes relative to total voters
+- The percentage of **blank** votes relative to total voters
+- The percentage of **null** votes relative to total voters
 
-> **Dica:** "em relação ao total" significa que o divisor é sempre o total de eleitores.
-> Exemplo: `percentualNulos = nulos / totalEleitores × 100`
+> **Hint:** "relative to total" means the divisor is always the total number of voters.
+> Example: `nullPercentage = nullVotes / totalVoters × 100`
 
-Utilize **programação orientada a objetos**.
+Use **object-oriented programming**.
 
-#### Conceitos Necessários
+#### Required Concepts
 
-| # | Conceito | Por que é necessário |
+| # | Concept | Why it's needed |
 |---|---|---|
-| 1 | **Classes e instâncias** | O exercício exige encapsular os dados e métodos em uma classe |
-| 2 | **Atributos de instância** | Armazenar `totalEleitores`, `validos`, `brancos` e `nulos` como estado do objeto |
-| 3 | **Métodos de instância** | Cada cálculo de percentual deve ser um método separado |
-| 4 | **Encapsulamento** | Proteger os dados e expor apenas a interface necessária |
-| 5 | **Aritmética de ponto flutuante** | Divisão entre inteiros pode resultar em truncamento — entender `float` vs `int` |
-| 6 | **Regra de três / percentagem** | Base matemática do cálculo: `(parte / total) × 100` |
-| 7 | **Testes unitários** | Verificar os três métodos com os valores fornecidos |
+| 1 | **Classes and instances** | The exercise requires encapsulating data and methods in a class |
+| 2 | **Instance attributes** | Store `totalVoters`, `valid`, `blank`, and `null` as object state |
+| 3 | **Instance methods** | Each percentage calculation must be a separate method |
+| 4 | **Encapsulation** | Protect data and expose only the necessary interface |
+| 5 | **Floating-point arithmetic** | Integer division may truncate — understand `float` vs `int` |
+| 6 | **Percentage formula** | Mathematical base: `(part / total) × 100` |
+| 7 | **Unit tests** | Verify all three methods against the provided values |
 
 ---
 
 ### 02 · Bubble Sort
 
-#### Descrição
+#### Description
 
-Dado o vetor:
+Given the following array:
 
 ```
 v = {5, 3, 2, 4, 7, 1, 0, 6}
 ```
 
-Implemente o algoritmo **Bubble Sort** para ordenar o vetor em ordem crescente.
+Implement the **Bubble Sort** algorithm to sort the array in ascending order.
 
-**Como o Bubble Sort funciona:**
+**How Bubble Sort works:**
 
-1. Percorra o vetor comparando elementos adjacentes (dois a dois)
-2. Troque as posições se o elemento da esquerda for maior que o da direita
-3. Repita os passos acima `(n - 1)` vezes, onde `n` é o tamanho do vetor
-4. A cada iteração, o maior elemento restante "sobe" para sua posição final — ele não precisa ser percorrido novamente
+1. Traverse the array comparing adjacent elements (two at a time)
+2. Swap positions if the left element is greater than the right one
+3. Repeat the above steps `(n - 1)` times, where `n` is the array length
+4. After each pass, the largest remaining element "bubbles up" to its final position and no longer needs to be traversed
 
-**Exemplo da primeira iteração:**
+**First pass example:**
 
 ```
-(5  3) 2  4  7  1  0  6   → troca  → 3  5  2  4  7  1  0  6
- 3 (5  2) 4  7  1  0  6   → troca  → 3  2  5  4  7  1  0  6
- 3  2 (5  4) 7  1  0  6   → troca  → 3  2  4  5  7  1  0  6
- 3  2  4 (5  7) 1  0  6   → mantém → 3  2  4  5  7  1  0  6
- 3  2  4  5 (7  1) 0  6   → troca  → 3  2  4  5  1  7  0  6
- 3  2  4  5  1 (7  0) 6   → troca  → 3  2  4  5  1  0  7  6
- 3  2  4  5  1  0 (7  6)  → troca  → 3  2  4  5  1  0  6 [7]
+(5  3) 2  4  7  1  0  6   → swap   → 3  5  2  4  7  1  0  6
+ 3 (5  2) 4  7  1  0  6   → swap   → 3  2  5  4  7  1  0  6
+ 3  2 (5  4) 7  1  0  6   → swap   → 3  2  4  5  7  1  0  6
+ 3  2  4 (5  7) 1  0  6   → keep   → 3  2  4  5  7  1  0  6
+ 3  2  4  5 (7  1) 0  6   → swap   → 3  2  4  5  1  7  0  6
+ 3  2  4  5  1 (7  0) 6   → swap   → 3  2  4  5  1  0  7  6
+ 3  2  4  5  1  0 (7  6)  → swap   → 3  2  4  5  1  0  6 [7]
 ```
 
-O `7` está em sua posição final. A segunda iteração não precisa incluí-lo.
+`7` is now in its final position. The second pass does not need to include it.
 
-#### Conceitos Necessários
+#### Required Concepts
 
-| # | Conceito | Por que é necessário |
+| # | Concept | Why it's needed |
 |---|---|---|
-| 1 | **Arrays / Vetores** | Estrutura de dados base do exercício |
-| 2 | **Laços de repetição aninhados** | Loop externo (n-1 iterações) + loop interno (comparações) |
-| 3 | **Operação de swap (troca)** | Trocar dois elementos requer variável auxiliar ou destructuring |
-| 4 | **Comparação entre elementos** | Condicionais para decidir se troca ou mantém |
-| 5 | **Complexidade de algoritmos** | Entender O(n²) no pior caso e por que o algoritmo precisa de múltiplas passagens |
-| 6 | **Otimização incremental** | Reduzir o tamanho da janela de comparação a cada iteração |
-| 7 | **Índices e limites de array** | Evitar `IndexOutOfBounds` ao comparar pares adjacentes |
+| 1 | **Arrays** | The base data structure of this exercise |
+| 2 | **Nested loops** | Outer loop (n-1 passes) + inner loop (comparisons) |
+| 3 | **Swap operation** | Exchanging two elements requires a temporary variable or destructuring |
+| 4 | **Element comparison** | Conditionals to decide whether to swap or keep |
+| 5 | **Algorithm complexity** | Understanding O(n²) worst case and why multiple passes are needed |
+| 6 | **Incremental optimization** | Reducing the comparison window at each pass |
+| 7 | **Array bounds** | Avoiding `IndexOutOfBounds` when comparing adjacent pairs |
 
 ---
 
-### 03 · Fatorial
+### 03 · Factorial
 
-#### Descrição
+#### Description
 
-Implemente um programa que calcule o **fatorial** de qualquer número inteiro não-negativo.
+Implement a program that calculates the **factorial** of any non-negative integer.
 
-**Definição formal:**
+**Formal definition:**
 
 ```
-fatorial(n) = 1                      se n = 0
-fatorial(n) = n × fatorial(n - 1)   se n > 0
+factorial(n) = 1                       if n = 0
+factorial(n) = n × factorial(n - 1)   if n > 0
 ```
 
-**Casos de teste esperados:**
+**Expected test cases:**
 
 ```
 0! = 1
@@ -166,203 +170,203 @@ fatorial(n) = n × fatorial(n - 1)   se n > 0
 6! = 720
 ```
 
-> **Atenção:** `0! = 1` porque o produto vazio (sem nenhum fator) é definido como 1.
+> **Note:** `0! = 1` because the empty product (no factors) is defined as 1.
 
-#### Conceitos Necessários
+#### Required Concepts
 
-| # | Conceito | Por que é necessário |
+| # | Concept | Why it's needed |
 |---|---|---|
-| 1 | **Recursão** | A definição matemática é naturalmente recursiva |
-| 2 | **Caso base** | `fatorial(0) = 1` encerra a recursão; sem ele, há stack overflow |
-| 3 | **Caso recursivo** | `n × fatorial(n - 1)` é a chamada que reduz o problema |
-| 4 | **Call stack** | Entender como cada chamada empilha e desempilha na memória |
-| 5 | **Funções puras** | O resultado depende apenas da entrada — sem efeitos colaterais |
-| 6 | **Validação de entrada** | Tratar valores negativos e não-inteiros |
-| 7 | **Testes unitários** | Cobrir todos os casos fornecidos, incluindo o edge case `0!` |
+| 1 | **Recursion** | The mathematical definition is naturally recursive |
+| 2 | **Base case** | `factorial(0) = 1` terminates the recursion; without it, stack overflow occurs |
+| 3 | **Recursive case** | `n × factorial(n - 1)` reduces the problem size |
+| 4 | **Call stack** | Understanding how each call is pushed and popped from memory |
+| 5 | **Pure functions** | Output depends only on the input — no side effects |
+| 6 | **Input validation** | Handle negative numbers and non-integers |
+| 7 | **Unit tests** | Cover all provided cases, including the `0!` edge case |
 
 ---
 
-### 04 · Soma dos Múltiplos de 3 ou 5
+### 04 · Sum of Multiples of 3 or 5
 
-#### Descrição
+#### Description
 
-Implemente uma função que receba um número **X** como parâmetro e retorne a **soma de todos os números naturais abaixo de X que são múltiplos de 3 ou de 5**.
+Implement a function that receives a number **X** as a parameter and returns the **sum of all natural numbers below X that are multiples of 3 or 5**.
 
-**Exemplo:**
+**Example:**
 
-Para `X = 10`, os múltiplos de 3 ou 5 abaixo de 10 são: `3, 5, 6, 9`
+For `X = 10`, the multiples of 3 or 5 below 10 are: `3, 5, 6, 9`
 
 ```
 3 + 5 + 6 + 9 = 23
 ```
 
-> **Atenção:** "abaixo de X" significa estritamente menor que X — o próprio X não é incluído.
+> **Note:** "below X" means strictly less than X — X itself is not included.
 
-#### Conceitos Necessários
+#### Required Concepts
 
-| # | Conceito | Por que é necessário |
+| # | Concept | Why it's needed |
 |---|---|---|
-| 1 | **Operador módulo (`%`)** | Verificar divisibilidade: `n % 3 === 0` ou `n % 5 === 0` |
-| 2 | **Laço de repetição** | Iterar de 1 até X-1 |
-| 3 | **Condicional composta (OR)** | Um número é incluído se for múltiplo de 3 **ou** de 5 |
-| 4 | **Acumulador** | Variável que soma os valores elegíveis |
-| 5 | **Parâmetros de função** | A função deve ser genérica, não hardcoded para X=10 |
-| 6 | **Edge cases** | X = 0, X = 1, X negativo — o que retornar? |
-| 7 | **Funções puras** | Mesmo valor de entrada sempre gera o mesmo resultado |
+| 1 | **Modulo operator (`%`)** | Check divisibility: `n % 3 === 0` or `n % 5 === 0` |
+| 2 | **Loop** | Iterate from 1 to X-1 |
+| 3 | **Compound conditional (OR)** | A number is included if it's a multiple of 3 **or** 5 |
+| 4 | **Accumulator** | Variable that sums the eligible values |
+| 5 | **Function parameters** | The function must be generic, not hardcoded for X=10 |
+| 6 | **Edge cases** | X = 0, X = 1, negative X — what should be returned? |
+| 7 | **Pure functions** | Same input always produces the same output |
 
 ---
 
-### 05 · Cadastro de Veículos
+### 05 · Vehicle Registration
 
-#### Descrição
+#### Description
 
-Desenvolva uma aplicação **full-stack** composta por:
+Build a **full-stack** application consisting of:
 
-- **Back-end:** API JSON RESTful (Java ou Node.js) com todos os verbos HTTP
-- **Front-end:** Single Page Application (SPA) consumindo a API
+- **Back-end:** RESTful JSON API (Java or Node.js) using all HTTP verbs
+- **Front-end:** Single Page Application (SPA) consuming the API
 
-**Modelo de dados:**
+**Data model:**
 
 ```
-veiculo:    string
-marca:      string
-ano:        integer
-descricao:  text
-vendido:    boolean
-created:    datetime
-updated:    datetime
+vehicle:     string
+brand:       string
+year:        integer
+description: text
+sold:        boolean
+created:     datetime
+updated:     datetime
 ```
 
-**Funcionalidades obrigatórias:**
+**Required features:**
 
-- Cadastrar, atualizar (total e parcial) e excluir veículos
-- Exibir contagem de veículos **não vendidos**
-- Distribuição de veículos por **década de fabricação** (ex: 1990 → 15 veículos)
-- Distribuição de veículos por **fabricante** (ex: Ford → 14 veículos)
-- Listar veículos registrados na **última semana**
-- Validar consistência das marcas (rejeitar variações incorretas como *Forde*, *Volksvagen*)
+- Create, fully update, partially update, and delete vehicles
+- Display the count of **unsold** vehicles
+- Distribution of vehicles by **decade of manufacture** (e.g., 1990 → 15 vehicles)
+- Distribution of vehicles by **manufacturer** (e.g., Ford → 14 vehicles)
+- List vehicles registered in the **last week**
+- Validate brand consistency (reject misspellings like *Forde*, *Volksvagen*)
 
-**Endpoints da API:**
+**API endpoints:**
 
-| Método | Rota | Descrição |
+| Method | Route | Description |
 |---|---|---|
-| `GET` | `/veiculos` | Retorna todos os veículos |
-| `GET` | `/veiculos?marca={marca}&ano={ano}&cor={cor}` | Filtra por parâmetros |
-| `GET` | `/veiculos/{id}` | Retorna detalhes de um veículo |
-| `POST` | `/veiculos` | Cadastra um novo veículo |
-| `PUT` | `/veiculos/{id}` | Atualiza todos os dados do veículo |
-| `PATCH` | `/veiculos/{id}` | Atualiza parcialmente o veículo |
-| `DELETE` | `/veiculos/{id}` | Remove o veículo |
+| `GET` | `/veiculos` | Returns all vehicles |
+| `GET` | `/veiculos?marca={brand}&ano={year}&cor={color}` | Filter by parameters |
+| `GET` | `/veiculos/{id}` | Returns vehicle details |
+| `POST` | `/veiculos` | Creates a new vehicle |
+| `PUT` | `/veiculos/{id}` | Fully updates a vehicle |
+| `PATCH` | `/veiculos/{id}` | Partially updates a vehicle |
+| `DELETE` | `/veiculos/{id}` | Deletes a vehicle |
 
-#### Conceitos Necessários
+#### Required Concepts
 
-| # | Conceito | Por que é necessário |
+| # | Concept | Why it's needed |
 |---|---|---|
-| 1 | **Arquitetura REST** | Todos os endpoints seguem as convenções RESTful |
-| 2 | **Verbos HTTP** | GET, POST, PUT, PATCH e DELETE com semântica correta |
-| 3 | **JSON** | Formato de troca de dados entre front e back |
-| 4 | **CRUD** | As quatro operações básicas sobre o recurso veículo |
-| 5 | **Banco de dados** | Persistência do modelo de dados (relacional ou NoSQL) |
-| 6 | **ORM / Query Builder** | Mapeamento entre objetos e tabelas |
-| 7 | **Validação de dados** | Marcas inválidas devem ser rejeitadas na camada de entrada |
-| 8 | **Filtros e query params** | Endpoint de listagem com filtros opcionais |
-| 9 | **Aggregations / GROUP BY** | Distribuição por década e por fabricante |
-| 10 | **Filtro por data** | Veículos registrados na última semana (`created >= now - 7 days`) |
-| 11 | **SPA (front-end)** | Comunicação assíncrona com a API, sem recarregamento de página |
-| 12 | **Testes unitários** | Cobertura dos endpoints e regras de negócio |
-| 13 | **Design Patterns** | Ex: Repository, Service Layer, MVC |
-| 14 | **Clean Code** | Nomes expressivos, funções pequenas, sem duplicação |
+| 1 | **REST architecture** | All endpoints follow RESTful conventions |
+| 2 | **HTTP verbs** | GET, POST, PUT, PATCH and DELETE with correct semantics |
+| 3 | **JSON** | Data exchange format between front-end and back-end |
+| 4 | **CRUD** | The four basic operations on the vehicle resource |
+| 5 | **Database** | Persistence layer for the data model (relational or NoSQL) |
+| 6 | **ORM / Query Builder** | Mapping between objects and database tables |
+| 7 | **Data validation** | Invalid brands must be rejected at the input layer |
+| 8 | **Filters and query params** | Listing endpoint with optional filters |
+| 9 | **Aggregations / GROUP BY** | Distribution by decade and by manufacturer |
+| 10 | **Date filtering** | Vehicles registered in the last week (`created >= now - 7 days`) |
+| 11 | **SPA (front-end)** | Asynchronous API communication without full page reloads |
+| 12 | **Unit tests** | Coverage of endpoints and business rules |
+| 13 | **Design Patterns** | e.g., Repository, Service Layer, MVC |
+| 14 | **Clean Code** | Expressive names, small functions, no duplication |
 
 ---
 
-## Tabela de Checkpoints
+## Checkpoint Table
 
-Use esta tabela para acompanhar o progresso em cada exercício. Ada avalia cada item como `✅ Aprovado`, `⚠️ Revisar` ou `❌ Reprovado`.
+Use this table to track progress across all exercises. Ada evaluates each item as `✅ Approved`, `⚠️ Needs Revision`, or `❌ Rejected`.
 
-### Checkpoints por Exercício
+### Cross-Exercise Checkpoints
 
 | # | Checkpoint | Ex 01 | Ex 02 | Ex 03 | Ex 04 | Ex 05 |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | O código compila/executa sem erros | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 2 | O resultado está matematicamente correto | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 3 | Os casos de teste fornecidos passam | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 4 | Edge cases são tratados corretamente | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 5 | O código usa os conceitos exigidos pelo exercício | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 6 | Os nomes de variáveis e funções são expressivos | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 7 | Não há código duplicado desnecessário | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 8 | Há testes unitários com cobertura adequada | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 9 | O candidato consegue explicar a solução oralmente | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 1 | Code compiles/runs without errors | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 2 | Result is mathematically correct | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 3 | All provided test cases pass | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 4 | Edge cases are handled correctly | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 5 | Code uses the concepts required by the exercise | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 6 | Variable and function names are expressive | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 7 | No unnecessary code duplication | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 8 | Unit tests with adequate coverage | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 9 | Candidate can explain the solution verbally | ☐ | ☐ | ☐ | ☐ | ☐ |
 
-### Checkpoints Específicos — Ex 01 (Votos)
+### Specific Checkpoints — Ex 01 (Votes)
 
-| # | Critério | Status |
+| # | Criterion | Status |
 |---|---|:---:|
-| 1.1 | Existe uma classe com atributos para os dados eleitorais | ☐ |
-| 1.2 | Os três métodos de percentual estão implementados separadamente | ☐ |
-| 1.3 | A divisão usa ponto flutuante (não trunca o resultado) | ☐ |
-| 1.4 | Os resultados para os valores de exemplo são 80%, 15% e 5% | ☐ |
+| 1.1 | A class exists with attributes for the electoral data | ☐ |
+| 1.2 | Three separate percentage methods are implemented | ☐ |
+| 1.3 | Division uses floating-point (result is not truncated) | ☐ |
+| 1.4 | Results for the example values are 80%, 15%, and 5% | ☐ |
 
-### Checkpoints Específicos — Ex 02 (Bubble Sort)
+### Specific Checkpoints — Ex 02 (Bubble Sort)
 
-| # | Critério | Status |
+| # | Criterion | Status |
 |---|---|:---:|
-| 2.1 | O algoritmo usa dois laços aninhados (ou equivalente) | ☐ |
-| 2.2 | O swap é feito corretamente sem perder valores | ☐ |
-| 2.3 | A janela de comparação reduz a cada iteração | ☐ |
-| 2.4 | O vetor `{5,3,2,4,7,1,0,6}` resulta em `{0,1,2,3,4,5,6,7}` | ☐ |
-| 2.5 | O candidato explica por que são necessárias `n-1` passagens | ☐ |
+| 2.1 | Algorithm uses two nested loops (or equivalent) | ☐ |
+| 2.2 | Swap is performed correctly without losing values | ☐ |
+| 2.3 | Comparison window shrinks at each pass | ☐ |
+| 2.4 | Array `{5,3,2,4,7,1,0,6}` results in `{0,1,2,3,4,5,6,7}` | ☐ |
+| 2.5 | Candidate explains why `n-1` passes are needed | ☐ |
 
-### Checkpoints Específicos — Ex 03 (Fatorial)
+### Specific Checkpoints — Ex 03 (Factorial)
 
-| # | Critério | Status |
+| # | Criterion | Status |
 |---|---|:---:|
-| 3.1 | A solução usa recursão | ☐ |
-| 3.2 | O caso base `fatorial(0) = 1` está implementado | ☐ |
-| 3.3 | `5! = 120` e `6! = 720` são retornados corretamente | ☐ |
-| 3.4 | Entradas inválidas (negativas) são tratadas | ☐ |
-| 3.5 | O candidato explica o que acontece na call stack | ☐ |
+| 3.1 | Solution uses recursion | ☐ |
+| 3.2 | Base case `factorial(0) = 1` is implemented | ☐ |
+| 3.3 | `5! = 120` and `6! = 720` are returned correctly | ☐ |
+| 3.4 | Invalid inputs (negatives) are handled | ☐ |
+| 3.5 | Candidate explains what happens on the call stack | ☐ |
 
-### Checkpoints Específicos — Ex 04 (Múltiplos)
+### Specific Checkpoints — Ex 04 (Multiples)
 
-| # | Critério | Status |
+| # | Criterion | Status |
 |---|---|:---:|
-| 4.1 | A função aceita X como parâmetro (não é hardcoded) | ☐ |
-| 4.2 | O operador módulo é usado para verificar divisibilidade | ☐ |
-| 4.3 | Para `X = 10`, o retorno é `23` | ☐ |
-| 4.4 | Números múltiplos de ambos (ex: 15) não são somados duas vezes | ☐ |
-| 4.5 | Edge cases com X ≤ 0 são tratados | ☐ |
+| 4.1 | Function accepts X as a parameter (not hardcoded) | ☐ |
+| 4.2 | Modulo operator is used to check divisibility | ☐ |
+| 4.3 | For `X = 10`, the return value is `23` | ☐ |
+| 4.4 | Numbers that are multiples of both (e.g., 15) are not double-counted | ☐ |
+| 4.5 | Edge cases with X ≤ 0 are handled | ☐ |
 
-### Checkpoints Específicos — Ex 05 (Cadastro de Veículos)
+### Specific Checkpoints — Ex 05 (Vehicle Registration)
 
-| # | Critério | Status |
+| # | Criterion | Status |
 |---|---|:---:|
-| 5.1 | API retorna respostas em JSON com status HTTP corretos | ☐ |
-| 5.2 | Todos os 7 endpoints estão implementados e funcionais | ☐ |
-| 5.3 | PUT atualiza todos os campos; PATCH atualiza parcialmente | ☐ |
-| 5.4 | Contagem de veículos não vendidos está correta | ☐ |
-| 5.5 | Agrupamento por década de fabricação funciona corretamente | ☐ |
-| 5.6 | Agrupamento por fabricante funciona corretamente | ☐ |
-| 5.7 | Filtro de veículos da última semana funciona corretamente | ☐ |
-| 5.8 | Marcas inválidas são rejeitadas com mensagem de erro clara | ☐ |
-| 5.9 | O front-end SPA consome a API sem recarregar a página | ☐ |
-| 5.10 | Testes unitários cobrem os endpoints e regras de negócio | ☐ |
+| 5.1 | API returns JSON responses with correct HTTP status codes | ☐ |
+| 5.2 | All 7 endpoints are implemented and functional | ☐ |
+| 5.3 | PUT updates all fields; PATCH updates partially | ☐ |
+| 5.4 | Count of unsold vehicles is correct | ☐ |
+| 5.5 | Grouping by decade of manufacture works correctly | ☐ |
+| 5.6 | Grouping by manufacturer works correctly | ☐ |
+| 5.7 | Last-week filter works correctly | ☐ |
+| 5.8 | Invalid brands are rejected with a clear error message | ☐ |
+| 5.9 | Front-end SPA consumes the API without full page reloads | ☐ |
+| 5.10 | Unit tests cover endpoints and business rules | ☐ |
 
 ---
 
-## Critérios Gerais de Avaliação
+## General Evaluation Criteria
 
-Estes critérios se aplicam a todos os exercícios e são avaliados transversalmente por Ada:
+These criteria apply to all exercises and are evaluated transversally by Ada:
 
-| Critério | Descrição |
+| Criterion | Description |
 |---|---|
-| **Facilidade de configuração** | O projeto deve rodar com poucos comandos; instruções claras no README |
-| **Performance** | Soluções não devem ter complexidade desnecessariamente alta |
-| **Código limpo** | Legível, sem código morto, sem magic numbers, bem nomeado |
-| **Documentação de código** | Comentários onde a intenção não é óbvia pelo código |
-| **Documentação do projeto** | README com instruções de instalação, execução e testes |
-| **Boas práticas** | Git com commits coesos, `.gitignore`, sem credenciais no repositório |
-| **Design Patterns** | Uso consciente de padrões onde aplicável (especialmente no Ex 05) |
+| **Setup ease** | Project must run with minimal commands; clear instructions in the README |
+| **Performance** | Solutions must not have unnecessarily high complexity |
+| **Clean code** | Readable, no dead code, no magic numbers, well named |
+| **Code documentation** | Comments where intent is not obvious from the code itself |
+| **Project documentation** | README with setup, run, and test instructions |
+| **Best practices** | Cohesive git commits, `.gitignore`, no credentials in the repository |
+| **Design Patterns** | Conscious use of patterns where applicable (especially in Ex 05) |
 
 ---
 
-> **Lembrete da Ada:** *"Antes de submeter, rode todos os seus testes, revise seus commits e verifique se alguém consegue rodar o projeto do zero seguindo apenas o seu README."*
+> **Ada's reminder:** *"Before submitting, run all your tests, review your commits, and verify that someone can run the project from scratch following only your README."*
