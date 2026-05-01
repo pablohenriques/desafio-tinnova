@@ -27,15 +27,34 @@
 
 Este repositório reúne cinco desafios de programação que cobrem desde conceitos fundamentais de orientação a objetos e algoritmos clássicos até o desenvolvimento de uma aplicação web full-stack com API RESTful. Os exercícios são independentes entre si e implementados em **Go (Golang)**.
 
-**Estrutura sugerida de diretórios:**
+**Estrutura do projeto:**
 
 ```
 desafio-tinnova/
-├── ex01-votos/
-├── ex02-bubble-sort/
-├── ex03-fatorial/
-├── ex04-multiplos/
-└── ex05-veiculos/
+│
+├── go.mod
+├── go.sum
+├── Makefile
+├── README.md
+├── README.pt-BR.md
+│
+├── votos/                   ← Ex 01
+│   ├── votos.go
+│   └── votos_test.go
+│
+├── bubblesort/              ← Ex 02
+│   ├── bubblesort.go
+│   └── bubblesort_test.go
+│
+├── fatorial/                ← Ex 03
+│   ├── fatorial.go
+│   └── fatorial_test.go
+│
+├── multiplos/               ← Ex 04
+│   ├── multiplos.go
+│   └── multiplos_test.go
+│
+└── veiculos/                ← Ex 05
 ```
 
 ---
@@ -223,7 +242,7 @@ Para `X = 10`, os múltiplos de 3 ou 5 abaixo de 10 são: `3, 5, 6, 9`
 Desenvolva uma aplicação **full-stack** composta por:
 
 - **Back-end:** API JSON RESTful escrita em **Go (Golang)** com todos os verbos HTTP
-- **Front-end:** Single Page Application (SPA) consumindo a API
+- **Front-end:** Single Page Application (SPA) construída com **React.js** consumindo a API
 
 **Modelo de dados:**
 
@@ -272,7 +291,7 @@ updated:    datetime
 | 8 | **Filtros e query params** | Endpoint de listagem com filtros opcionais |
 | 9 | **Aggregations / GROUP BY** | Distribuição por década e por fabricante |
 | 10 | **Filtro por data** | Veículos registrados na última semana (`created >= now - 7 days`) |
-| 11 | **SPA (front-end)** | Comunicação assíncrona com a API, sem recarregamento de página |
+| 11 | **React.js (SPA)** | Interface baseada em componentes, gerenciamento de estado e comunicação assíncrona com a API sem recarregamento de página |
 | 12 | **Testes unitários** | Cobertura dos endpoints e regras de negócio |
 | 13 | **Design Patterns** | Ex: Repository, Service Layer, MVC |
 | 14 | **Clean Code** | Nomes expressivos, funções pequenas, sem duplicação |
@@ -348,7 +367,7 @@ Use esta tabela para acompanhar o progresso em cada exercício. Ada avalia cada 
 | 5.6 | Agrupamento por fabricante funciona corretamente | ☐ |
 | 5.7 | Filtro de veículos da última semana funciona corretamente | ☐ |
 | 5.8 | Marcas inválidas são rejeitadas com mensagem de erro clara | ☐ |
-| 5.9 | O front-end SPA consome a API sem recarregar a página | ☐ |
+| 5.9 | O front-end React.js consome a API sem recarregar a página | ☐ |
 | 5.10 | Testes unitários cobrem os endpoints e regras de negócio | ☐ |
 
 ---

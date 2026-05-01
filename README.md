@@ -27,15 +27,34 @@
 
 This repository contains five programming challenges covering object-oriented fundamentals, classic algorithms, and full-stack web application development. Each exercise is independent and implemented in **Go (Golang)**.
 
-**Suggested directory structure:**
+**Project structure:**
 
 ```
 desafio-tinnova/
-├── ex01-votes/
-├── ex02-bubble-sort/
-├── ex03-factorial/
-├── ex04-multiples/
-└── ex05-vehicles/
+│
+├── go.mod
+├── go.sum
+├── Makefile
+├── README.md
+├── README.pt-BR.md
+│
+├── votos/                   ← Ex 01
+│   ├── votos.go
+│   └── votos_test.go
+│
+├── bubblesort/              ← Ex 02
+│   ├── bubblesort.go
+│   └── bubblesort_test.go
+│
+├── fatorial/                ← Ex 03
+│   ├── fatorial.go
+│   └── fatorial_test.go
+│
+├── multiplos/               ← Ex 04
+│   ├── multiplos.go
+│   └── multiplos_test.go
+│
+└── veiculos/                ← Ex 05
 ```
 
 ---
@@ -223,7 +242,7 @@ For `X = 10`, the multiples of 3 or 5 below 10 are: `3, 5, 6, 9`
 Build a **full-stack** application consisting of:
 
 - **Back-end:** RESTful JSON API written in **Go (Golang)** using all HTTP verbs
-- **Front-end:** Single Page Application (SPA) consuming the API
+- **Front-end:** Single Page Application (SPA) built with **React.js** consuming the API
 
 **Data model:**
 
@@ -272,7 +291,7 @@ updated:     datetime
 | 8 | **Filters and query params** | Listing endpoint with optional filters |
 | 9 | **Aggregations / GROUP BY** | Distribution by decade and by manufacturer |
 | 10 | **Date filtering** | Vehicles registered in the last week (`created >= now - 7 days`) |
-| 11 | **SPA (front-end)** | Asynchronous API communication without full page reloads |
+| 11 | **React.js (SPA)** | Component-based UI, state management, and asynchronous API communication without full page reloads |
 | 12 | **Unit tests** | Coverage of endpoints and business rules |
 | 13 | **Design Patterns** | e.g., Repository, Service Layer, MVC |
 | 14 | **Clean Code** | Expressive names, small functions, no duplication |
@@ -348,7 +367,7 @@ Use this table to track progress across all exercises. Ada evaluates each item a
 | 5.6 | Grouping by manufacturer works correctly | ☐ |
 | 5.7 | Last-week filter works correctly | ☐ |
 | 5.8 | Invalid brands are rejected with a clear error message | ☐ |
-| 5.9 | Front-end SPA consumes the API without full page reloads | ☐ |
+| 5.9 | React.js front-end consumes the API without full page reloads | ☐ |
 | 5.10 | Unit tests cover endpoints and business rules | ☐ |
 
 ---
