@@ -306,24 +306,24 @@ Use esta tabela para acompanhar o progresso em cada exercício. Ada avalia cada 
 
 | # | Checkpoint | Ex 01 | Ex 02 | Ex 03 | Ex 04 | Ex 05 |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | O código compila/executa sem erros | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 2 | O resultado está matematicamente correto | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 3 | Os casos de teste fornecidos passam | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 4 | Edge cases são tratados corretamente | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 5 | O código usa os conceitos exigidos pelo exercício | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 6 | Os nomes de variáveis e funções são expressivos | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 7 | Não há código duplicado desnecessário | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 8 | Há testes unitários com cobertura adequada | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 1 | O código compila/executa sem erros | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 2 | O resultado está matematicamente correto | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 3 | Os casos de teste fornecidos passam | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 4 | Edge cases são tratados corretamente | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 5 | O código usa os conceitos exigidos pelo exercício | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 6 | Os nomes de variáveis e funções são expressivos | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 7 | Não há código duplicado desnecessário | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 8 | Há testes unitários com cobertura adequada | ✅ | ☐ | ☐ | ☐ | ☐ |
 | 9 | O candidato consegue explicar a solução oralmente | ☐ | ☐ | ☐ | ☐ | ☐ |
 
 ### Checkpoints Específicos — Ex 01 (Votos)
 
 | # | Critério | Status |
 |---|---|:---:|
-| 1.1 | Existe uma classe com atributos para os dados eleitorais | ☐ |
-| 1.2 | Os três métodos de percentual estão implementados separadamente | ☐ |
-| 1.3 | A divisão usa ponto flutuante (não trunca o resultado) | ☐ |
-| 1.4 | Os resultados para os valores de exemplo são 80%, 15% e 5% | ☐ |
+| 1.1 | Existe uma classe com atributos para os dados eleitorais | ✅ |
+| 1.2 | Os três métodos de percentual estão implementados separadamente | ✅ |
+| 1.3 | A divisão usa ponto flutuante (não trunca o resultado) | ✅ |
+| 1.4 | Os resultados para os valores de exemplo são 80%, 15% e 5% | ✅ |
 
 ### Checkpoints Específicos — Ex 02 (Bubble Sort)
 

@@ -306,24 +306,24 @@ Use this table to track progress across all exercises. Ada evaluates each item a
 
 | # | Checkpoint | Ex 01 | Ex 02 | Ex 03 | Ex 04 | Ex 05 |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | Code compiles/runs without errors | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 2 | Result is mathematically correct | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 3 | All provided test cases pass | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 4 | Edge cases are handled correctly | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 5 | Code uses the concepts required by the exercise | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 6 | Variable and function names are expressive | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 7 | No unnecessary code duplication | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 8 | Unit tests with adequate coverage | ☐ | ☐ | ☐ | ☐ | ☐ |
+| 1 | Code compiles/runs without errors | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 2 | Result is mathematically correct | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 3 | All provided test cases pass | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 4 | Edge cases are handled correctly | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 5 | Code uses the concepts required by the exercise | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 6 | Variable and function names are expressive | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 7 | No unnecessary code duplication | ✅ | ☐ | ☐ | ☐ | ☐ |
+| 8 | Unit tests with adequate coverage | ✅ | ☐ | ☐ | ☐ | ☐ |
 | 9 | Candidate can explain the solution verbally | ☐ | ☐ | ☐ | ☐ | ☐ |
 
 ### Specific Checkpoints — Ex 01 (Votes)
 
 | # | Criterion | Status |
 |---|---|:---:|
-| 1.1 | A class exists with attributes for the electoral data | ☐ |
-| 1.2 | Three separate percentage methods are implemented | ☐ |
-| 1.3 | Division uses floating-point (result is not truncated) | ☐ |
-| 1.4 | Results for the example values are 80%, 15%, and 5% | ☐ |
+| 1.1 | A class exists with attributes for the electoral data | ✅ |
+| 1.2 | Three separate percentage methods are implemented | ✅ |
+| 1.3 | Division uses floating-point (result is not truncated) | ✅ |
+| 1.4 | Results for the example values are 80%, 15%, and 5% | ✅ |
 
 ### Specific Checkpoints — Ex 02 (Bubble Sort)
 
